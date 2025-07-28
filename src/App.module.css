@@ -1,0 +1,532 @@
+/* Modern OS-neutral App Store styling */
+.storeApp {
+  min-height: 100vh;
+  background: #f8f9fa;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0 24px 24px 24px;
+}
+
+/* Header */
+.storeHeader {
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 24px 0;
+}
+
+.headerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.storeTitle {
+  margin: 0 0 8px 0;
+  font-size: 28px;
+  font-weight: 600;
+  color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.storeLogo {
+  font-size: 32px;
+}
+
+.storeSubtitle {
+  margin: 0;
+  font-size: 16px;
+  color: #6b7280;
+  font-weight: 400;
+}
+
+/* Main content */
+.mainLayout {
+  display: flex;
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: calc(100vh - 140px);
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar */
+.sidebar {
+  width: 280px;
+  background: #f8f9fa;
+  border-right: 1px solid #e5e7eb;
+  padding: 24px 0;
+  flex-shrink: 0;
+}
+
+.sidebarNav {
+  padding: 0 24px;
+}
+
+.navTitle {
+  font-size: 12px;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 12px 0;
+  padding: 0 12px;
+}
+
+.navTitle:not(:first-child) {
+  margin-top: 32px;
+}
+
+.navList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px 12px;
+  border: none;
+  background: none;
+  text-align: left;
+  font-size: 14px;
+  color: #6b7280;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 2px;
+}
+
+.navItem:hover {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.navItemActive {
+  background: #3b82f6;
+  color: white;
+  font-weight: 500;
+}
+
+.navItemActive:hover {
+  background: #2563eb;
+}
+
+.mainContent {
+  flex: 1;
+  padding: 32px;
+  min-width: 0;
+  background: white;
+}
+
+/* Search section */
+.searchSection {
+  margin-bottom: 32px;
+}
+
+.searchContainer {
+  max-width: 600px;
+}
+
+.searchForm {
+  width: 100%;
+}
+
+.searchInputGroup {
+  display: flex;
+  gap: 12px;
+}
+
+.searchInput {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 16px;
+  background: white;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.searchInput:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.searchInput::placeholder {
+  color: #9ca3af;
+}
+
+.searchButton {
+  padding: 12px 24px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.searchButton:hover:not(:disabled) {
+  background: #2563eb;
+  transform: translateY(-1px);
+}
+
+.searchButton:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Results section */
+.resultsSection {
+  margin-top: 24px;
+}
+
+.sectionTitle {
+  color: #374151;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+/* App grid */
+.appGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.appCard {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.2s ease;
+  position: relative;
+  height: 180px;
+}
+
+.appCard:hover {
+  border-color: #d1d5db;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.appIconContainer {
+  margin-bottom: 12px;
+}
+
+.appIcon {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  object-fit: cover;
+  border: 1px solid #f3f4f6;
+}
+
+.appInfo {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.appName {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 6px 0;
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.appSummary {
+  font-size: 13px;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  overflow: hidden;
+  height: 2.8em;
+}
+
+.appMeta {
+  margin-top: auto;
+  width: 100%;
+}
+
+.appId {
+  font-size: 11px;
+  color: #9ca3af;
+  font-family: 'SF Mono', 'Monaco', 'Cascadia Code', monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.installButton {
+  padding: 8px 20px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  align-self: center;
+  min-width: 80px;
+  max-width: 120px;
+}
+
+.installButton:hover:not(:disabled) {
+  background: #2563eb;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.installButton:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Welcome section */
+.welcomeSection {
+  padding: 80px 24px;
+  text-align: center;
+}
+
+.welcomeContent {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.welcomeIcon {
+  font-size: 64px;
+  margin-bottom: 24px;
+  opacity: 0.6;
+}
+
+.welcomeContent h2 {
+  margin: 0 0 16px 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.welcomeContent p {
+  font-size: 16px;
+  color: #6b7280;
+  margin: 0 0 32px 0;
+  line-height: 1.5;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.feature {
+  text-align: center;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.featureIcon {
+  font-size: 32px;
+  margin-bottom: 12px;
+  opacity: 0.8;
+}
+
+.feature h4 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.feature p {
+  margin: 0;
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.4;
+}
+
+/* Empty state */
+.emptyState {
+  padding: 80px 24px;
+  text-align: center;
+}
+
+.emptyStateContent {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.emptyStateIcon {
+  font-size: 48px;
+  margin-bottom: 16px;
+  opacity: 0.4;
+}
+
+.emptyStateContent h3 {
+  margin: 0 0 8px 0;
+  color: #374151;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.emptyStateContent p {
+  margin: 0;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+/* Loading state */
+.loadingSection {
+  padding: 80px 24px;
+  text-align: center;
+}
+
+.loadingContent {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.loadingSpinner {
+  width: 32px;
+  height: 32px;
+  border: 2px solid #e5e7eb;
+  border-top: 2px solid #3b82f6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 16px auto;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.loadingContent h3 {
+  margin: 0 0 8px 0;
+  color: #374151;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.loadingContent p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .mainLayout {
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .sidebarNav {
+    padding: 16px 24px;
+  }
+  
+  .navList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .navItem {
+    margin-bottom: 0;
+    white-space: nowrap;
+  }
+  
+  .mainContent {
+    padding: 24px;
+  }
+  
+  .searchInputGroup {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .appGrid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 12px;
+  }
+  
+  .appCard {
+    height: 160px;
+    padding: 12px;
+  }
+  
+  .appIcon {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+@media (max-width: 480px) {
+  .storeApp {
+    padding: 0 16px 16px 16px;
+  }
+  
+  .storeTitle {
+    font-size: 24px;
+  }
+  
+  .searchInput, .searchButton {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+  
+  .appGrid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+  
+  .sidebar {
+    padding: 16px 0;
+  }
+  
+  .sidebarNav {
+    padding: 0 16px;
+  }
+  
+  .navList {
+    display: block;
+  }
+  
+  .navItem {
+    margin-bottom: 2px;
+  }
+}

@@ -1,0 +1,356 @@
+/* App Details Modal Styles */
+.detailsContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.detailsContent {
+  background: white;
+  border-radius: 12px;
+  max-width: 800px;
+  max-height: 90vh;
+  width: 100%;
+  overflow-y: auto;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Header */
+.detailsHeader {
+  padding: 24px;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 10;
+}
+
+.backButton {
+  background: none;
+  border: none;
+  color: #3b82f6;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 8px 0;
+  margin-bottom: 16px;
+  transition: color 0.2s ease;
+}
+
+.backButton:hover {
+  color: #2563eb;
+}
+
+.appHeaderInfo {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.appIconLarge {
+  width: 128px;
+  height: 128px;
+  border-radius: 24px;
+  object-fit: cover;
+  border: 1px solid #e5e7eb;
+  flex-shrink: 0;
+}
+
+.appTitleSection {
+  flex: 1;
+  min-width: 0;
+}
+
+.appTitle {
+  font-size: 28px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 4px 0;
+  line-height: 1.2;
+}
+
+.appDeveloper {
+  font-size: 16px;
+  color: #6b7280;
+  margin: 0 0 8px 0;
+}
+
+.appSummary {
+  font-size: 16px;
+  color: #374151;
+  margin: 0 0 16px 0;
+  line-height: 1.5;
+}
+
+.appMeta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.appRating,
+.appDownloads,
+.appCategory {
+  font-size: 14px;
+  color: #6b7280;
+  padding: 4px 8px;
+  background: #f3f4f6;
+  border-radius: 6px;
+}
+
+.appRating {
+  color: #059669;
+  background: #ecfdf5;
+}
+
+.installSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.installButtonLarge {
+  padding: 12px 32px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 120px;
+}
+
+.installButtonLarge:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.appInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.appSize,
+.appVersion {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+/* Content Sections */
+.screenshotsSection,
+.descriptionSection,
+.infoSection,
+.permissionsSection {
+  padding: 24px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.screenshotsSection:last-child,
+.descriptionSection:last-child,
+.infoSection:last-child,
+.permissionsSection:last-child {
+  border-bottom: none;
+}
+
+.sectionTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 16px 0;
+}
+
+/* Screenshots */
+.screenshotsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.screenshot {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  transition: transform 0.2s ease;
+}
+
+.screenshot:hover {
+  transform: scale(1.02);
+}
+
+/* Description */
+.description {
+  line-height: 1.6;
+  color: #374151;
+}
+
+.description p {
+  margin: 0 0 16px 0;
+}
+
+.description p:last-child {
+  margin-bottom: 0;
+}
+
+/* Information Grid */
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.infoItem {
+  padding: 16px;
+  background: #f9fafb;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.infoLabel {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+}
+
+.infoValue {
+  display: block;
+  font-size: 14px;
+  color: #111827;
+  font-weight: 500;
+  word-break: break-all;
+}
+
+/* Permissions */
+.permissionsList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.permissionItem {
+  padding: 12px 16px;
+  background: #fef3c7;
+  border: 1px solid #fbbf24;
+  border-radius: 6px;
+  color: #92400e;
+  font-size: 14px;
+}
+
+/* Loading State */
+.loadingState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.loadingSpinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #e5e7eb;
+  border-top: 3px solid #3b82f6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 16px;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.loadingState h3 {
+  margin: 0 0 8px 0;
+  color: #374151;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.loadingState p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .detailsContainer {
+    padding: 0;
+    align-items: stretch;
+  }
+  
+  .detailsContent {
+    max-height: 100vh;
+    border-radius: 0;
+    max-width: none;
+  }
+  
+  .appHeaderInfo {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+  
+  .appIconLarge {
+    width: 96px;
+    height: 96px;
+    align-self: center;
+  }
+  
+  .installSection {
+    align-self: stretch;
+  }
+  
+  .installButtonLarge {
+    width: 100%;
+  }
+  
+  .screenshotsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .infoGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .detailsHeader,
+  .screenshotsSection,
+  .descriptionSection,
+  .infoSection,
+  .permissionsSection {
+    padding: 16px;
+  }
+  
+  .appTitle {
+    font-size: 24px;
+  }
+  
+  .sectionTitle {
+    font-size: 18px;
+  }
+}
